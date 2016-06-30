@@ -35,6 +35,7 @@ var api = heredoc(function () {
      ```   
      */
 })
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -51,16 +52,16 @@ module.exports = {
     ],
     module: {
         loaders: [
-            //ExtractTextPlugin.extract('style-loader', 'css-loader','sass-loader')
-            //http://react-china.org/t/webpack-extracttextplugin-autoprefixer/1922/4
-            // https://github.com/b82/webpack-basic-starter/blob/master/webpack.config.js 
-            {test: /\.scss$/, loader:'style!css!sass',exclude: /node_modules/},
-            {test: /\.(ttf|eot|svg|woff2?)((\?|#)[^\'\"]+)?$/, loader: 'url-loader'}
+
+          {test: /\.scss$/, loader:ExtractTextPlugin.extract('css!sass'),exclude: /node_modules/},
+          {test: /\.(ttf|eot|svg|woff2?)((\?|#)[^\'\"]+)?$/, loader: 'file-loader?name=[name].[ext]'}
 
         ]
     },
-    
+    plugins: [new ExtractTextPlugin("styles.css")],
     resolve: {
-        extensions: ['.js', '', '.css']
+        extensions: ['.js', '', '.css'],
+         alias: {
+        }
     }
 }

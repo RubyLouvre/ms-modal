@@ -11,14 +11,7 @@
     "url": "git+https://github.com/RubyLouvre/ms-modal.git"
   },
   "dependencies": {
-    "avalon2": "~2.1.1",
-    "url-loader": "0.5.7",
-    "node-sass": "^3.8.0",
-    "sass-loader": "^3.2.2",
-    "style-loader": "~0.13.1",
-    "css-loader": "~0.8.0",
-    "text-loader": "0.0.1",
-    "webpack": "^1.13.1"
+    "avalon2": "~2.1.1"
   },
   "author": "RubyLouvre",
   "license": "MIT",
@@ -27,6 +20,14 @@
   },
   "homepage": "https://github.com/RubyLouvre/ms-modal#readme",
   "devDependencies": {
+    "url-loader": "0.5.7",
+    "file-loader": "~0.9.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^3.2.2",
+    "style-loader": "~0.13.1",
+    "css-loader": "~0.8.0",
+    "text-loader": "0.0.1",
+    "webpack": "^1.13.1",
     "extract-text-webpack-plugin": "^1.0.1"
 }
 }

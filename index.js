@@ -1,6 +1,6 @@
 var avalon = require('avalon2')
 
-require('./style.scss')
+require('./stylesheets/style.scss')
 
 avalon.component('ms-modal', {
     template: require('text!./template.html'),
@@ -29,8 +29,6 @@ avalon.component('ms-modal', {
                    document.body.style.overflow = ''
                 }
             })
-                   
-
         }
     },
     soleSlot: 'content'
